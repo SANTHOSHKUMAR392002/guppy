@@ -1,0 +1,83 @@
+
+/* Responsive Media Queries */
+@media (max-width: 425px) {
+    .container-fluid {
+      background-size: 100% 100% !important;
+      background-position: center !important;
+    }
+  
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-fluid {
+      background-size: cover !important;
+    }
+  
+    h2 {
+      font-size: 2rem !important;
+    }
+  }
+  /* Fullscreen Hero Section */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Fade-in Effect */
+.home-container.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animated Gradient Text */
+.home-title {
+  font-family:"Montserrat", serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: whitesmoke;
+  text-shadow: 3px 3px 6px rgba(15, 41, 57, 0.5);
+  animation: fadeInZoom 1.5s ease-in-out;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 50px;
+  }
+}
+
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

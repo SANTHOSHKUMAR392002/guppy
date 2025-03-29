@@ -1,0 +1,44 @@
+/* Gradient Background */
+.navbar {
+  background-color: aliceblue;
+      transition: transform 0.6s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  /* Slide-down Animation */
+  .navbar.slide-down {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    color:black !important;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: rgb(130, 229, 209) !important;
+  }
+  
+  /* Navbar Toggler Animation */
+  .navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-toggler.toggle-rotate {
+    transform: rotate(90deg);
+  }
+  
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      background: rgb(252, 249, 249);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  
